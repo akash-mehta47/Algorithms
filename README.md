@@ -27,6 +27,14 @@ This repository contains the C++ implementation of various programming exercises
 * **Frequency Count**
 * **Reverse Number**
 
+### 6. Arrays and Matrices
+* **Basic Array I/O**
+* **Sum of Array Elements**
+* **Maximum Value Search**
+* **Multi-Dimensional Arrays (2x2 & 3x3)**
+* **Even/Odd Frequency Count**
+* **Matrix Addition**
+
 ## Implementation Details
 
 * **Language**: C++
