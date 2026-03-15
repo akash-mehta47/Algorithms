@@ -118,10 +118,128 @@ void solveQuestion4() {
     cout << endl;
 }
 
+// Q5: -----------------------------
+void solveQuestion5() {
+    /* INTEGER a,b,c
+        SET a:= 4, b:= 4, c:= 4
+        if(a & ( b ^ b ) & c ))
+            a = a >> 1
+        End if
+        print a + b + c      
+    */
+    int a2 = 4, b2 = 4, c3 = 4;
+    cout << "Q5 sequence: ";
+    if (a2 & (b2 ^ b2) & c3) {
+        a2 = a2 >> 1;
+    }
+    cout << (a2 + b2 + c3) << endl;
+}
+
+// Q6: -----------------------------
+void solveQuestion6() {
+    /* INTEGER x
+        SET x:= 259
+        IF x EQUAL 0 THEN
+            PRINT "0"
+        ELSE
+            IF x MOD 9 EQUAL 0 THEN
+                PRINT "9"
+            ELSE
+                PRINT x MOD 9
+            ENDIF
+        ENDIF
+    */
+    int x = 259;
+    cout << "Q6 sequence: ";
+    if (x == 0) {
+        cout << "0" << endl;
+    } else {
+        if (x % 9 == 0) {
+            cout << "9" << endl;
+        } else {
+            cout << (x % 9) << endl;
+        }
+    }
+}
+
+// Q7: -----------------------------
+void solveQuestion7() {
+    /* INTEGER p, q, r
+        SET p:= 5, q:= 2, r:= 5
+        FOR each p from 5 to 6 
+            p = ( r + 7 ) + r
+            IF ((r+q) > (q-r) || 8<q) THEN
+                q = (p+r) + q
+                CONTINUE
+            ENDIF
+        END FOR
+        PRINT p+q
+    */
+    int p3 = 5, q3 = 2, r3 = 5;
+    for (p3 = 5; p3 <= 6; p3++) {
+        p3 = (r3 + 7) + r3;
+        if ((r3 + q3) > (q3 - r3) || 8 < q3) {
+            q3 = (p3 + r3) + q3;
+            continue;
+        }
+    }
+    cout << "Q7 Result: " << (p3 + q3) << endl;
+}
+
+// Q8: -----------------------------
+void solveQuestion8() {
+    /* INTEGER a, b, c
+        SET a:=7, b:= 6, c:= 5
+        b := a + b
+        IF ((b+c) < (c-b) && 2<a) THEN
+            c := 11 + a
+        ENDIF
+        c := (b+a) + a
+        IF ((a&9) < b) THEN
+            b := (a & a) + c
+        ENDIF
+        PRINT a + b + c
+    */
+    int a3 = 7, b3 = 6, c4 = 5;
+    b3 = a3 + b3;
+    if ((b3 + c4) < (c4 - b3) && 2 < a3) {
+        c4 = 11 + a3;
+    }
+    c4 = (b3 + a3) + a3;
+    if ((a3 & 9) < b3) {
+        b3 = (a3 & a3) + c4;
+    }
+    cout << "Q8 Result: " << (a3 + b3 + c4) << endl;
+}
+
+// Q9: -----------------------------
+void solveQuestion9() {
+    /* INTEGER a, b, c
+        SET b:= 0, c:= 0
+        FOR each a from 1 to 5 
+            PRINT c
+            b := b + 1 
+            c := c + b
+        NEXT a
+    */
+    int a4 = 0, b4 = 0, c4 = 0;
+    for (a4 = 1; a4 <= 5; a4++) {
+        cout << c4 << " ";
+        b4 = b4 + 1;
+        c4 = c4 + b4;
+    }
+    cout << endl;
+}
+
 int main() {
     solveQuestion1();
     solveQuestion2();
     solveQuestion3();
     solveQuestion4();
+    solveQuestion5();
+    solveQuestion6();
+    solveQuestion7();
+    solveQuestion8();
+    solveQuestion9();
     return 0;
 }

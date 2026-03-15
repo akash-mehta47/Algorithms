@@ -85,21 +85,56 @@ void maxValueInArray() {
     cout << "The maximum value in the array is: " << max_val << "\n";
 }
 
+// Min Value in an Array
+/*
+ * DECLARE a : ARRAY[0:4] OF INTEGER
+ * DECLARE min : INTEGER
+ * FOR i:= 0 TO 4
+ * READ a[i]
+ * END FOR
+ * min = a[0]
+ * FOR i:= 1 TO 4
+ * IF a[i] < min THEN
+ * min = a[i]
+ * END IF
+ * END FOR
+ * PRINT min
+ */
+void minValueInArray() {
+    int arr2[5];
+    cout << "\n--- Min Value in an Array ---\n";
+    cout << "Enter 5 integers:\n";
+    for (int i = 0; i < 5; i++) {
+        cin >> arr2[i];
+    }
+    int min_val = arr2[0];
+    for (int i = 1; i < 5; i++) {
+        if (arr2[i] < min_val) {
+            min_val = arr2[i];
+        }
+    }
+    cout << "The minimum value in the array is: " << min_val << "\n";
+}
 
 // MULTI-DIMENSIONAL ARRAYS
 /*
- * DECLARE a : ARRAY[2][2] OF INTEGER
- * FOR r:= 0 TO 1
- * FOR c:= 0 TO 1
- * READ a[r][c]
- * END FOR
- * END FOR
- * FOR r:= 0 TO 1
- * FOR c:= 0 TO 1
- * PRINT a[r][c]
- * END FOR
- * END FOR
+ *  DECLARE a : ARRAY[2][2] OF INTEGER
+ *  OR
+ *  DECLARE a : ARRAY[0:1][0:1] OF INTEGER
+ *   OR
+ *  INTEGER a[2][2]
+ *  FOR r:= 0 TO 1
+ *      FOR c:= 0 TO 1
+ *          READ a[r][c]
+ *      END FOR
+ *  END FOR
+ *  FOR r:= 0 TO 1
+ *      FOR c:= 0 TO 1
+ *          PRINT a[r][c]
+ *      END FOR
+ *  END FOR
  */
+
 void multiDimensionalArrayIO() {
     int a2[2][2];
     cout << "\n--- Multi-Dimensional Array I/O ---\n";
@@ -116,6 +151,34 @@ void multiDimensionalArrayIO() {
         }
         cout << "\n";
     }
+}
+
+// SUM OF 2D ARRAYS
+/*
+ *  DECLARE a : ARRAY[2][2] OF INTEGER
+ *  DECLARE sum : INTEGER
+ *  SET sum := 0
+ *  FOR r:= 0 TO 1
+ *      FOR c:= 0 TO 1
+ *          READ a[r][c]
+ *          sum = sum + a[r][c]
+ *      END FOR
+ *  END FOR
+ *  PRINT sum
+ */
+
+void multiDimensionalArraySum() {
+    int a2[2][2];
+    int sum = 0;
+    cout << "\n--- Sum of Elements in a 2D Array ---\n";
+    cout << "Enter 4 integers for a 2x2 array:\n";
+    for (int r = 0; r < 2; r++) {
+        for (int c = 0; c < 2; c++) {
+            cin >> a2[r][c];
+            sum += a2[r][c];  
+        }
+    }
+    cout << "The sum of the integers in the 2D array is: " << sum << "\n";
 }
 
 
